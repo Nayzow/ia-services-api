@@ -78,7 +78,7 @@ L'API expose les routes suivantes :
 ```
 
 ```
-/assistant/ : renvoie une réponse générée à partir d'un fichier audio (format wav).
+/assistant/ : renvoie une réponse sous forme de text générée à partir d'un fichier audio (format wav).
 ```
 
-Notez que les requêtes POST pour les routes /audio/ et /foxgpt/ doivent inclure un fichier audio en format wav dans leur corps.
+Notez que les requêtes POST pour les routes /audio/ et /assistant/ doivent inclure un fichier audio en format wav dans leur corps.
