@@ -1,5 +1,6 @@
 from fastapi import FastAPI, UploadFile, File
 
+from app.services.ArticleService import ArticleService
 from app.services.AudioService import AudioService
 from app.services.AssistantService import AssistantService
 from app.services.OpenAiService import OpenAiService
@@ -15,6 +16,21 @@ async def text(prompt):
 @app.get("/image/{prompt}")
 async def image(prompt):
     return OpenAiService.image_from_prompt(prompt)
+
+
+@app.get("/article/{title}")
+async def article(title):
+    return ArticleService.article_from_title(title)
+
+
+@app.get("/article/html/{title}")
+async def article_html(title):
+    return ArticleService.article_html_from_title(title)
+
+
+@app.get("/article/markdown/{title}")
+async def article_markdown(title):
+    return ArticleService.article_markdown_from_title(title)
 
 
 @app.post("/audio/")
