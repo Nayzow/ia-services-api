@@ -1,4 +1,4 @@
-# IA-Services-API
+# IA Services API
 
 API Python FastAPI qui expose des fonctionnalités pour travailler avec du texte, des images et du son à l'aide de plusieurs autres services d'intelligence artificielle et de machine learning.
 
