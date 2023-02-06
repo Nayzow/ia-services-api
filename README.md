@@ -37,7 +37,7 @@ Vous pouvez choisir de lancer l'api sur votre machine avec uvicorn ou sinon vous
 ```
 
 ```bash
-    uvicorn main:app
+    uvicorn app.main:app
 ```
 
 #### Lancer l'API avec Docker
