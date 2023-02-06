@@ -1,5 +1,5 @@
-from src.services.AudioService import AudioService
-from src.services.OpenAiService import OpenAiService
+from app.services.AudioService import AudioService
+from app.services.OpenAiService import OpenAiService
 
 
 class AssistantService:

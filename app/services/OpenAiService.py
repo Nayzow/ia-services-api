@@ -2,7 +2,7 @@ import openai
 
 
 class OpenAiService:
-    openai.api_key = "[VOTRE_CLE]"
+    openai.api_key = "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"
 
     @staticmethod
     def text_from_prompt(prompt):

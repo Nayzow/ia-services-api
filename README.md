@@ -59,7 +59,7 @@ docker run --name ia-services-api -p 8000:8000 -d ia-services-api
 ```
 
 Après avoir exécuté ces commandes, votre API FastAPI sera disponible à l'adresse http://localhost:8000.
-Vous pouvez maintenant utiliser les différentes routes de l'API documentée en dessous.
+Vous pouvez maintenant utiliser les différentes routes de l'API documentées en dessous.
 
 ## Routes de l'API
 

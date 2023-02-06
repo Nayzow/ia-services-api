@@ -1,8 +1,8 @@
 from fastapi import FastAPI, UploadFile, File
 
-from src.services.AudioService import AudioService
-from src.services.AssistantService import AssistantService
-from src.services.OpenAiService import OpenAiService
+from app.services.AudioService import AudioService
+from app.services.AssistantService import AssistantService
+from app.services.OpenAiService import OpenAiService
 
 app = FastAPI()
 
