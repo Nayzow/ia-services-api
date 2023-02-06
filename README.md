@@ -65,6 +65,7 @@ Vous pouvez maintenant utiliser les différentes routes de l'API documentées en
 
 L'API expose les routes suivantes :
 
+### GET
 ```
 /text/{prompt} : renvoie du texte généré à partir d'un prompt.
 ```
@@ -72,6 +73,20 @@ L'API expose les routes suivantes :
 ```
 /image/{prompt} : renvoie une image générée à partir d'un prompt.
 ```
+
+```
+/article/{title} : renvoie un article SEO générée à partir d'un titre.
+```
+
+```
+/article/html/{title} : renvoie un article SEO au format html générée à partir d'un titre.
+```
+
+```
+/article/markdown/{title} : renvoie un article SEO au format markdown générée à partir d'un titre.
+```
+
+### POST
 
 ```
 /audio/ : renvoie du texte généré à partir d'un fichier audio (format wav).
