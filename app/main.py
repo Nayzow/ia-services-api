@@ -1,12 +1,23 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI, UploadFile, File, HTTPException
+from requests import RequestException
 
 from app.services.ArticleService import ArticleService
-from app.services.AudioService import AudioService
 from app.services.AssistantService import AssistantService
+from app.services.AudioService import AudioService
 from app.services.LetterService import LetterService
 from app.services.OpenAiService import OpenAiService
 
 app = FastAPI()
+
+
+@app.exception_handler(HTTPException)
+async def http_exception_handler(request, exc):
+    return {"error": f"HTTP Exception: {exc.detail}"}
+
+
+@app.exception_handler(RequestException)
+async def request_exception_handler(request, exc):
+    return {"error": f"Request Exception: {str(exc)}"}
 
 
 @app.get("/prompt/{prompt}")
