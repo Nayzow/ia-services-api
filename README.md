@@ -55,7 +55,7 @@ docker build -t ia-services-api .
 #### 2. Run un conteneur à partir de l'image Docker
 
 ```bash
-docker run --name ia-services-api -p 8000:8000 -d ia-services-api
+docker run --name ia-services-api -p 8888:8888 -d ia-services-api
 ```
 
 Après avoir exécuté ces commandes, votre API FastAPI sera disponible à l'adresse http://localhost:8000.
@@ -66,8 +66,9 @@ Vous pouvez maintenant utiliser les différentes routes de l'API documentées en
 L'API expose les routes suivantes :
 
 ### GET
+
 ```
-/text/{prompt} : renvoie du texte généré à partir d'un prompt.
+/prompt/{prompt} : renvoie un texte de réponse généré à partir d'un prompt.
 ```
 
 ```

@@ -3,12 +3,13 @@ from fastapi import FastAPI, UploadFile, File
 from app.services.ArticleService import ArticleService
 from app.services.AudioService import AudioService
 from app.services.AssistantService import AssistantService
+from app.services.LetterService import LetterService
 from app.services.OpenAiService import OpenAiService
 
 app = FastAPI()
 
 
-@app.get("/text/{prompt}")
+@app.get("/prompt/{prompt}")
 async def text(prompt):
     return OpenAiService.text_from_prompt(prompt)
 
@@ -31,6 +32,11 @@ async def article_html(title):
 @app.get("/article/markdown/{title}")
 async def article_markdown(title):
     return ArticleService.article_markdown_from_title(title)
+
+
+@app.get("/letter/{company}")
+async def letter(company):
+    return LetterService.letter_for_company(company)
 
 
 @app.post("/audio/")
