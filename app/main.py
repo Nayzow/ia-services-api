@@ -45,11 +45,6 @@ async def article_markdown(title):
     return ArticleService.article_markdown_from_title(title)
 
 
-@app.get("/letter/{company}")
-async def letter(company):
-    return LetterService.letter_for_company(company)
-
-
 @app.post("/audio/")
 async def audio(file: UploadFile = File(...)):
     return AudioService.text_from_audio(file)
