@@ -4,7 +4,6 @@ from requests import RequestException
 from app.services.ArticleService import ArticleService
 from app.services.AssistantService import AssistantService
 from app.services.AudioService import AudioService
-from app.services.LetterService import LetterService
 from app.services.OpenAiService import OpenAiService
 from app.services.TranslationService import TranslationService
 
