@@ -6,6 +6,7 @@ from app.services.AssistantService import AssistantService
 from app.services.AudioService import AudioService
 from app.services.LetterService import LetterService
 from app.services.OpenAiService import OpenAiService
+from app.services.TranslationService import TranslationService
 
 app = FastAPI()
 
@@ -21,35 +22,55 @@ async def request_exception_handler(request, exc):
 
 
 @app.get("/prompt/{prompt}")
-async def text(prompt):
-    return OpenAiService.text_from_prompt(prompt)
+async def find_output_prompt_by_prompt(prompt: str):
+    return OpenAiService.find_output_prompt_by_prompt(prompt)
 
 
 @app.get("/image/{prompt}")
-async def image(prompt):
-    return OpenAiService.image_from_prompt(prompt)
+async def find_image_by_prompt(prompt: str):
+    return OpenAiService.find_image_by_prompt(prompt)
 
 
 @app.get("/article/{title}")
-async def article(title):
-    return ArticleService.article_from_title(title)
+async def find_article_by_title(title: str):
+    return ArticleService.find_article_by_title(title)
 
 
 @app.get("/article/html/{title}")
-async def article_html(title):
-    return ArticleService.article_html_from_title(title)
+async def find_article_html_by_title(title: str):
+    return ArticleService.find_article_html_by_title(title)
 
 
 @app.get("/article/markdown/{title}")
-async def article_markdown(title):
-    return ArticleService.article_markdown_from_title(title)
+async def find_article_markdown_by_title(title: str):
+    return ArticleService.find_article_markdown_by_title(title)
 
 
-@app.post("/audio/")
-async def audio(file: UploadFile = File(...)):
-    return AudioService.text_from_audio(file)
+@app.get("/translate/{langage}/{prompt}")
+async def find_translation_by_langage_and_prompt(langage: str, prompt: str):
+    return TranslationService.find_translation_by_langage_and_prompt(langage, prompt)
 
 
-@app.post("/assistant/")
-async def assistant(file: UploadFile = File(...)):
-    return AssistantService.response_from_audio(file)
+@app.get("/audio/output/{prompt}")
+async def find_audio_bytes_by_prompt(prompt: str):
+    return AudioService.find_audio_bytes_by_prompt(prompt)
+
+
+@app.get("/audio/output/file/{prompt}")
+async def find_audio_file_by_prompt(prompt: str):
+    return AudioService.find_audio_file_by_prompt(prompt)
+
+
+@app.post("/audio/input")
+async def find_text_from_audio(file: UploadFile = File(...)):
+    return AudioService.find_text_by_audio(file)
+
+
+@app.post("/assistant/text")
+async def find_output_prompt_by_audio_input(file: UploadFile = File(...)):
+    return AssistantService.find_output_prompt_by_audio_input(file)
+
+
+@app.post("/assistant/vocal")
+async def find_audio_output_by_audio_input(file: UploadFile = File(...)):
+    return AssistantService.find_audio_output_by_audio_input(file)
