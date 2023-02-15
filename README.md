@@ -103,14 +103,22 @@ L'API expose les routes suivantes :
 /translate/{langage}/{prompt} : renvoie une traduction générée à partir d'un prompt dans une langue précisée.
 ```
 
+```
+/audio/output/{prompt} : renvoie un les bytes en base 64 d'un fichier audio au format wav avec une voix synthetisé à partir d'un prompt.
+```
+
 ### POST
 
 ```
-/audio/ : renvoie du texte généré à partir d'un fichier audio (format wav).
+/audio/input : renvoie du texte généré à partir d'un fichier audio (format wav).
 ```
 
 ```
-/assistant/ : renvoie une réponse sous forme de text générée à partir d'un fichier audio (format wav).
+/assistant/text : renvoie un prompt de sortie sous forme texte générée à partir d'un fichier audio (format wav) -> réponse textuel de l'assistant.
 ```
 
-Notez que les requêtes POST pour les routes /audio/ et /assistant/ doivent inclure un fichier audio en format wav dans leur corps.
+```
+/assistant/vocal : renvoie les bytes en base 64 pour un fichier audio au format wav générée à partir d'un fichier audio (format wav) -> réponse vocal de l'assistant.
+```
+
+Notez que les requêtes POST pour les routes /audio/input, /assistant/text et /assistant/vocal doivent inclure un fichier audio en format wav dans leur corps.
