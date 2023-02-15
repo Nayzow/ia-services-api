@@ -12,7 +12,7 @@ git clone https://github.com/Nayzow/IA-Services-API.git
 
 ### 2. Initaliser votre clé OpenAi-API
 
-Pour profiter de l'ensemble des fonctionnalités de l'API, dans le fichier python :
+Pour profiter de l'ensemble des fonctionnalités de l'API, renseignez vos clés API :
 
 ```
 app/services/OpenAiService.py
@@ -22,6 +22,18 @@ Préciser votre clé OpenAi-API
 
 ```python
 openai.api_key = "[VOTRE_CLE]"
+```
+
+Et enfin, dans le fichier json :
+
+```
+app/resources/GoogleClourdAuthKey.json
+```
+
+Préciser votre clé GoogleCloudAuthKey
+
+```json
+"private_key_id": "[VOTRE_CLE]"
 ```
 
 ### 3. Lancer l'API
@@ -85,6 +97,10 @@ L'API expose les routes suivantes :
 
 ```
 /article/markdown/{title} : renvoie un article SEO au format markdown générée à partir d'un titre.
+```
+
+```
+/translate/{langage}/{prompt} : renvoie une traduction générée à partir d'un prompt dans une langue précisée.
 ```
 
 ### POST
