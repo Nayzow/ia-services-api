@@ -52,6 +52,8 @@ pip install -r requirements.txt
 uvicorn app.main:app
 ```
 
+L'API est désormais disponible à l'adresse : http://localhost:8000.
+
 ### Lancer l'API avec Docker
 
 Si vous souhaitez utiliser Docker, voici les étapes pour construire et exécuter ce projet
@@ -70,7 +72,8 @@ docker build -t ia-services-api .
 docker run --name ia-services-api -p 8888:8888 -d ia-services-api
 ```
 
-Après avoir exécuté ces commandes, votre API FastAPI sera disponible à l'adresse http://localhost:8000.
+L'API est désormais disponible à l'adresse : http://localhost:8888
+
 Vous pouvez maintenant utiliser les différentes routes de l'API documentées en dessous.
 
 ## Documentation de l'API
