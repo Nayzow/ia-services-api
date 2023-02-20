@@ -10,7 +10,7 @@ API Python FastAPI qui expose des fonctionnalités pour travailler avec du texte
 git clone https://github.com/Nayzow/IA-Services-API.git
 ```
 
-### 2. Initaliser votre clé OpenAi-API
+### 2. Initaliser vos clés API.
 
 Pour profiter de l'ensemble des fonctionnalités de l'API, renseignez vos clés API :
 
@@ -18,13 +18,13 @@ Pour profiter de l'ensemble des fonctionnalités de l'API, renseignez vos clés 
 app/services/OpenAiService.py
 ```
 
-Préciser votre clé OpenAi-API
+Préciser votre clé OpenAi-API.
 
 ```python
 openai.api_key = "[VOTRE_CLE]"
 ```
 
-Et enfin, dans le fichier json :
+Et enfin, dans le fichier Json :
 
 ```
 app/resources/GoogleClourdAuthKey.json
