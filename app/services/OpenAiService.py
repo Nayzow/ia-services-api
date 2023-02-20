@@ -7,7 +7,7 @@ from app.utils.ExceptionUtil import ExceptionUtil
 
 
 class OpenAiService:
-    openai.api_key = "[VOTRE_CLE]"
+    openai.api_key = "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"
 
     @staticmethod
     def find_output_prompt_by_prompt(prompt: str) -> Union[str, dict[str]]:

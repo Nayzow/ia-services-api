@@ -13,7 +13,7 @@ class AssistantService:
             return ExceptionUtil.handle_exceptions(e)
 
     @staticmethod
-    def find_audio_output_by_audio_input(file):
+    def find_audio_output_bytes_by_audio_input(file):
         try:
             return AudioService.find_audio_bytes_by_prompt(
                 OpenAiService.find_output_prompt_by_prompt(

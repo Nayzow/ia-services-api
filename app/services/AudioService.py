@@ -41,26 +41,9 @@ class AudioService:
                 voice=AudioService.voice,
                 audio_config=AudioService.audio_config
             )
+            print('response', response)
             audio_content = base64.b64encode(response.audio_content).decode('utf-8')
             return {"audio_content": audio_content}
-
-        except Exception as e:
-            return ExceptionUtil.handle_exceptions(e)
-
-    @staticmethod
-    def find_audio_file_by_prompt(prompt: str):
-        try:
-            synthesis_input = texttospeech.SynthesisInput(prompt)
-            response = AudioService.client.synthesize_speech(
-                input=synthesis_input,
-                voice=AudioService.voice,
-                audio_config=AudioService.audio_config
-            )
-
-            filename = "app/resources/audio/output.wav"
-
-            with open(filename, "wb") as file:
-                file.write(response.audio_content)
 
         except Exception as e:
             return ExceptionUtil.handle_exceptions(e)

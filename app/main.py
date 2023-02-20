@@ -4,6 +4,7 @@ from requests import RequestException
 from app.services.ArticleService import ArticleService
 from app.services.AssistantService import AssistantService
 from app.services.AudioService import AudioService
+from app.services.LetterService import LetterService
 from app.services.OpenAiService import OpenAiService
 from app.services.TranslationService import TranslationService
 
@@ -50,14 +51,14 @@ async def find_translation_by_langage_and_prompt(langage: str, prompt: str):
     return TranslationService.find_translation_by_langage_and_prompt(langage, prompt)
 
 
+@app.get("/letter/{company}")
+async def find_letter_by_company(company: str):
+    return LetterService.find_letter_by_company(company)
+
+
 @app.get("/audio/output/{prompt}")
 async def find_audio_bytes_by_prompt(prompt: str):
     return AudioService.find_audio_bytes_by_prompt(prompt)
-
-
-@app.get("/audio/output/file/{prompt}")
-async def find_audio_file_by_prompt(prompt: str):
-    return AudioService.find_audio_file_by_prompt(prompt)
 
 
 @app.post("/audio/input")
@@ -71,5 +72,5 @@ async def find_output_prompt_by_audio_input(file: UploadFile = File(...)):
 
 
 @app.post("/assistant/vocal")
-async def find_audio_output_by_audio_input(file: UploadFile = File(...)):
-    return AssistantService.find_audio_output_by_audio_input(file)
+async def find_audio_output_bytes_by_audio_input(file: UploadFile = File(...)):
+    return AssistantService.find_audio_output_bytes_by_audio_input(file)
