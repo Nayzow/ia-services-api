@@ -1,12 +1,2 @@
 {
-  "type": "service_account",
-  "project_id": "wise-baton-363707",
-  "private_key_id": "8ac30ef968c23487160e10f17579dd53885405cc",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC1eR4qJ1ZAsfEn\n4FDj8VuQL0dsW0p7AiEV3YXv154XLB9+JG9tzwEE0K/RLf2+L8p9fMcJVfHGdGsw\n8Y6LlSUx5ffYwL+FtU42LjGa7JUCdb0HkX8jf8kQiOrMzau+2+hTP7m9z4EWSQSE\nKttO6kgnhboFHYW7wSsJcYbzi8CZKP/CN6DENlNFq91K1s3iuEW7vQn2hywFsXq0\nn+QE+J8IfAnWFPxUmOPUCZMExjHXYdFcgA31hk0nUO0fWDtUHEpv61Sm75hQNRYI\nvK+LIMmMXJrBBQpEKkunz/myeUbrkabSKiP7kkkJLYBsvIpB1qX2vYcLRaT/9nmF\nGJ+UhTLBAgMBAAECggEAAYsL6ZPvo4mdKVJFXyeCIxvzJZMcqJFe8Tyddb8drWjZ\nrzT1hsePT13MGEalzTBYQ9XT66AcbVbigvY+OLEOMbTjinIFfD2g58HKjZypqI19\nASOYoyIEQQ9dqhvCdD3n5WOp4LjzH3AD7sZJBWGlYa2nzxY+TleLthm4qgPuwYv6\n/w3VV1o9US7F3YMoCZn15DCiPUpgG8B5WiqIV1ApwMqZvuigNt4TQ03MuDlcxu0c\nWZGlF5Nj5AQaXfxwWe8KCtHkLUTR8FguAxw93BcJlFAkfN6EMrPGblm3UDnloLPd\ndzOw47WFmmPKLkZCxYOo8S4dFGAYQM8JSAUxTYge2QKBgQDdI3wlhTUbrQm3Nngq\nhwo806GOMJBFer5PUWeQmrJalXWcafb5az2xmrtsC3mR4xXBDMChZazf0QoK0RZO\nneFPbqE4o3EgD18yVRKG+eqt14uB6yPLLQJE8kIa4M0A1ll00J2crL8AwiL4b8fn\naGCe/vcLTubjaK0WVQ4aFKxROQKBgQDSFNkeykoBhcvfF3D4fXaR4Zt307FQosK8\nO8lnt5lTEv1MtR6WJBRMZ90eXnSvSXcPSoZeqRWP1RpIm3tJMsS5az3mRWA/aGuc\nycUVVQZBrC2nnanJGwj1Nv01zKhDllLHxDCry/dfDn4ptlrrV0gmKc0jwOI6gW36\n+01/Z83VyQKBgEnC4FITkJderHL0NDjbOkr3vFeVU0oZmwkR+h19vCgC2mwF3F9t\nqfJnzkRHv5Et0b/G5SnwpC0zqMna3Dn054Z7PEOMINu0xOghAEENc33w+5OmPxYy\nOSOOOwaEHV0+IjCYtTnhVQSHvOppPqCtbC0cloKrGtCXxcRBMqb4ZlHhAoGAOeRc\n4MtGEZ1ZTSUckJ2iaxkMyryfhGUV3OFs4xQJQIdfHiBbSWyv205T9OZ6qUNJeAFF\nfhiCRJypHZEbLFS9OYuAB1De8RpJbW98zCAeFULpYeNkwnKcyVZZ+NVpGRb3wO0j\nrHQMuzk3My95Zpkq3LlwOoYQ0aaRNDTEanOkmWECgYAhxYfTLghd9oGkV3KvutPN\nIn3T6MO51KlhJ3HJQOaSh8aUD2hPen//GsshctVLV0Kj9aw420Js3F1CBlxIF/4x\nWR8c0zCjmG8EiAIIh3UP1v4R3D6jhGtAf4b8oyRmTVT4j/6en8DaJV7r5XXojgic\nYzpbIpIEAXXJzBCFxQm1Fg==\n-----END PRIVATE KEY-----\n",
-  "client_email": "tts-unity@wise-baton-363707.iam.gserviceaccount.com",
-  "client_id": "102795429703870040514",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tts-unity%40wise-baton-363707.iam.gserviceaccount.com"
 }

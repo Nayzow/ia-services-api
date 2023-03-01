@@ -1,6 +1,7 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from requests import RequestException
 
+from app.services.RevisionService import RevisionService
 from app.services.ArticleService import ArticleService
 from app.services.AssistantService import AssistantService
 from app.services.AudioService import AudioService
@@ -54,6 +55,16 @@ async def find_translation_by_langage_and_prompt(langage: str, prompt: str):
 @app.get("/letter/{company}")
 async def find_letter_by_company(company: str):
     return LetterService.find_letter_by_company(company)
+
+
+@app.get("/revision/{subject}")
+async def find_revision_by_subject(subject: str):
+    return RevisionService.find_revision_by_subject(subject)
+
+
+@app.get("/revision/markdown/{subject}")
+async def find_revision_markdown_by_subject(subject: str):
+    return RevisionService.find_revision_markdown_by_subject(subject)
 
 
 @app.get("/audio/output/{prompt}")
