@@ -109,6 +109,10 @@ L'API expose les routes suivantes :
 ```
 
 ```
+/revision/{subject} : renvoie une prise de note à partir d'un sujet.
+```
+
+```
 /audio/output/{prompt} : renvoie un les bytes en base 64 d'un fichier audio au format wav avec une voix synthetisé à partir d'un prompt.
 ```
 
