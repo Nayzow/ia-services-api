@@ -109,7 +109,19 @@ L'API expose les routes suivantes :
 ```
 
 ```
-/revision/{subject} : renvoie une prise de note à partir d'un sujet.
+/cheatsheet/{subject} : renvoie une cheatsheet à partir d'un sujet.
+```
+
+```
+/letter/{company} : renvoie une lettre de motivation à partir du nom d'une enterprise.
+```
+
+```
+/mail/positive/{prompt} : renvoie un mail de réponse positif à partir d'un prompt.
+```
+
+```
+/mail/negative/{prompt} : renvoie un mail de réponse négatif à partir d'un prompt.
 ```
 
 ```
