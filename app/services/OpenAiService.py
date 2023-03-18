@@ -1,5 +1,4 @@
-from ctypes import Union
-from typing import Union, Any
+from typing import Union
 
 import openai
 
@@ -37,4 +36,3 @@ class OpenAiService:
 
         except Exception as e:
             return ExceptionUtil.handle_exceptions(e)
-

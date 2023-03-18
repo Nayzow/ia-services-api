@@ -1,9 +1,9 @@
 import base64
-from typing import Dict, Union, Any, List, Tuple
+import os
+from typing import Union
 
 import speech_recognition as sr
 from google.cloud import texttospeech
-import os
 
 from app.utils.ExceptionUtil import ExceptionUtil
 

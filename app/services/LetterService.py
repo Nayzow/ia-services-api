@@ -1,10 +1,13 @@
+from typing import Union
+
+from app.models.Letter import Letter
 from app.services.OpenAiService import OpenAiService
 from app.utils.ExceptionUtil import ExceptionUtil
 
 
 class LetterService:
     @staticmethod
-    def find_letter_by_company(company: str) -> str:
+    def find_letter_by_company(company: str) -> Union[Letter, str]:
         try:
             name: str = "Thibault Tanguy"
             age: str = "24"
@@ -33,14 +36,16 @@ class LetterService:
                                              "Soft-skills : " \
                                              "  - Bienveillant, empathique, à l'écoute, curieux, autonome"
 
-            prompt: str = "Ecris une lettre de motivation de 700 mots avec la formule de politesse 'Madame, Monsieur," \
+            prompt: str = "Génère une lettre de motivation de 700 mots avec la formule de politesse 'Madame, Monsieur," \
                           "' en français pour un poste de " + job + \
                           "en " + duration + \
                           " pour l'entreprise de services numérique " + company + \
                           ". Mentionne le nom de l'entreprise dans la lettre et signe au nom de +" + name + \
                           ". Mentionne l'intégralité de mes compétences, les voici : ' " + skills
 
-            return OpenAiService.find_output_prompt_by_prompt(prompt)
+            response = OpenAiService.find_output_prompt_by_prompt(prompt)
+
+            return Letter(name, duration, response)
 
         except Exception as e:
             return ExceptionUtil.handle_exceptions(e)
