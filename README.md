@@ -105,7 +105,7 @@ L'API expose les routes suivantes :
 ```
 
 ```
-/translate/{langage}/{prompt} : renvoie une traduction générée à partir d'un prompt dans une langue précisée.
+/translation/{langage}/{prompt} : renvoie une traduction générée à partir d'un prompt dans une langue précisée.
 ```
 
 ```
