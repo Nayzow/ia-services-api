@@ -3,3 +3,4 @@ venv
 __pycache__
 app/__pycache__
 app/services/__pycache__
+app/resources

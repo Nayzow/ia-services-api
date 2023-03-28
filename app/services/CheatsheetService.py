@@ -1,5 +1,4 @@
 from typing import Union
-
 from app.models.Cheatsheet import Cheatsheet
 from app.services.OpenAiService import OpenAiService
 from app.utils.ExceptionUtil import ExceptionUtil

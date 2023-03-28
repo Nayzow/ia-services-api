@@ -1,6 +1,5 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from requests import RequestException
-
 from app.services.MailService import MailService
 from app.services.CheatsheetService import CheatsheetService
 from app.services.ArticleService import ArticleService
@@ -64,11 +63,6 @@ async def find_positive_mail_response_by_prompt(prompt: str):
     return MailService.find_negative_mail_response_by_prompt(prompt)
 
 
-@app.get("/letter/{company}")
-async def find_letter_by_company(company: str):
-    return LetterService.find_letter_by_company(company)
-
-
 @app.get("/cheatsheet/{subject}")
 async def find_cheatsheet_by_subject(subject: str):
     return CheatsheetService.find_cheatsheet_by_subject(subject)
@@ -77,6 +71,11 @@ async def find_cheatsheet_by_subject(subject: str):
 @app.get("/cheatsheet/markdown/{subject}")
 async def find_cheatsheet_markdown_by_subject(subject: str):
     return CheatsheetService.find_cheatsheet_markdown_by_subject(subject)
+
+
+@app.get("/letter/{company}")
+async def find_letter_by_company(company: str):
+    return LetterService.find_letter_by_company(company)
 
 
 @app.get("/audio/output/{prompt}")

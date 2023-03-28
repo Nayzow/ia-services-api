@@ -1,6 +1,3 @@
-from fastapi import requests
-
-
 class ExceptionUtil:
     @staticmethod
     def handle_exceptions(e: Exception) -> str:

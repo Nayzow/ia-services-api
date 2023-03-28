@@ -1,7 +1,5 @@
 from typing import Union
-
 import openai
-
 from app.utils.ExceptionUtil import ExceptionUtil
 
 
